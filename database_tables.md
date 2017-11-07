@@ -8,3 +8,5 @@ items                | id(int), description(string), price(decimal)
 purchases_items      | id(int), purchase_id(int), item_id(int)
 merchants            | id(int), address(string), name(string)
 purchases_merchants  | id(int), purchase_id(int), merchant_id(int)
+
+* based on Rails generate model
