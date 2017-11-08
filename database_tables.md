@@ -2,11 +2,14 @@ HEADER EXAMPLE: purchaser name	item description	item price	purchase count	mercha
 
 TABLES               | COLUMNS(TYPE)
 ---------------------|---------------------------------------------
-purchases            | id(int), client_id(int), count(int)
 clients              | id(int), name(string)
 items                | id(int), description(string), price(decimal)
-purchases_items      | id(int), purchase_id(int), item_id(int)
 merchants            | id(int), address(string), name(string)
-purchases_merchants  | id(int), purchase_id(int), merchant_id(int)
+purchases            | id(int), client_id(int), count(int)
+items_merchants      | id(int), merchant_id(int), item_id(int)
+items_purchases      | id(int), purchase_id(int), item_id(int)
+merchants_purchases  | id(int), purchase_id(int), merchant_id(int)
+
 
 * based on Rails generate model
+* assuming pre registered clients, items and merchants
