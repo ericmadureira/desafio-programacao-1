@@ -1,0 +1,8 @@
+<h1>Sales file import</h1>
+
+<p>Upload your .tab file here:</p>
+
+<%= form_tag({action: :purchase_file_processing}, multipart: true) do %>
+	<%= file_field_tag 'import_file' %>	
+	<p><%= submit_tag %></p>
+<%end%>
